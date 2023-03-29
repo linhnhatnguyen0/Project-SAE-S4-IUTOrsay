@@ -5,3 +5,17 @@
   top: 0;
   left: 0;
 }
+.marker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.marker > p {
+  width: 50%;
+  color: rgb(192, 125, 0);
+  font-family: "SF Mono", monospace;
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: normal;
+}
