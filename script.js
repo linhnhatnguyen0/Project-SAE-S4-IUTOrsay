@@ -6,7 +6,6 @@ map.setZoom(17);
 map.setCenter([2.170936, 48.711115]);
 
 
-
 //cafet IUT
 var divElement = document.createElement("div");
 divElement.innerHTML =
