@@ -50,3 +50,47 @@ map.on("zoomend", function () {
     console.log("add");
   }
 });
+
+//tt.load().then(map);
+/*
+tt.setToken("Ue34QD5EuCWqslTHMvMzNIAhGwxEWhbj");
+tt.setProductInfo('MapsSDKExamples', '1.0');
+tt.services.setToken('Ue34QD5EuCWqslTHMvMzNIAhGwxEWhbj');
+var mapsService = tt.services.MapsService({ key: 'Ue34QD5EuCWqslTHMvMzNIAhGwxEWhbj' });
+var options = {
+  language: 'fr-FR',
+  minNumberOfCharacters: 2,
+  limit: 5
+};
+
+var searchBoxContainer = document.getElementById('searchBox');
+var ttSearchBox = new tt.plugins.SearchBox(mapsService, options)
+var searchMarkersManager = new SearchMarkersManager(map)
+ttSearchBox.on("tomtom.searchbox.resultsfound", handleResultsFound)
+ttSearchBox.on("tomtom.searchbox.resultselected", handleResultSelection)
+ttSearchBox.on("tomtom.searchbox.resultfocused", handleResultSelection)
+ttSearchBox.on("tomtom.searchbox.resultscleared", handleResultClearing)
+map.addControl(ttSearchBox, "top-right")
+searchBoxContainer.appendChild(ttsearchBox.getSearchBoxHTML());
+*/
+
+
+ var searchOptions= {
+      key: 'Ue34QD5EuCWqslTHMvMzNIAhGwxEWhbj',
+      limit: 5,
+      idxSet: 'POI,Geo',
+      language: 'fr-FR'
+  };
+
+/*
+var searchBox = new tt.plugins.SearchBox(tt.services, searchOptions);
+searchBox.addTo(map);*/
+
+var ttSearchBox = new tt.plugins.SearchBox(tt.services, searchOptions)
+/*var searchMarkersManager = new SearchMarkersManager(map)
+ttSearchBox.on("tomtom.searchbox.resultsfound", handleResultsFound)
+ttSearchBox.on("tomtom.searchbox.resultselected", handleResultSelection)
+ttSearchBox.on("tomtom.searchbox.resultfocused", handleResultSelection)
+ttSearchBox.on("tomtom.searchbox.resultscleared", handleResultClearing)*/
+map.addControl(ttSearchBox, "top-left")
+
