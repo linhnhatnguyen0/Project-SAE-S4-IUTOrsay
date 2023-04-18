@@ -78,6 +78,7 @@ const cafetIUT = new Marker(
 cafetIUT.addMarqueur();
 
 //--------------------------------------------------Henri-Moissan-----------------------------------------------//
+//com
 //cafet
 const cafetMoissan = new Marker(
   "Cafeteria Henri Moissan",
