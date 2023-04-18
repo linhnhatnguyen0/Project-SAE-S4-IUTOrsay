@@ -11,6 +11,8 @@ var eau = "eau";
 var toilettes = "toilettes";
 var sport = "sport";
 var velo = "vélo";
+var atelier = "atelier"
+var numerique = "numerique"
 
 class Marker {
   
@@ -42,6 +44,14 @@ class Marker {
       this.icone = "./img/restaurant-icon.png";
     }
     if (this.type == velo)
+    {
+      this.icone = "./img/restaurant-icon.png";
+    }
+    if (this.type == atelier)
+    {
+      this.icone = "./img/restaurant-icon.png";
+    }
+    if (this.type == numerique)
     {
       this.icone = "./img/restaurant-icon.png";
     }
@@ -83,6 +93,16 @@ cantineMoissan.addMarqueur()
 //------------------------------------Polytech-Paris-Saclay--------------------------------//
 const cafetPolytech = new Marker ("Cafetaria Polytech Paris Saclay", 2.171122, 48.709127,alimentation, "Hello world")
 cafetPolytech.addMarqueur()
+
+const espaceDetentePolytech = new Marker("Espace détente",2.17117325173756,48.70908355655419, espaceDetente, "tables + babyfoot + terasse")
+espaceDetentePolytech.addMarqueur()
+const tabletteEDTPolytech = new Marker("Tablette avec emploi du temps", 2.173001233646726,48.710171220522085, numerique, "se situe au rez de chaussé")
+tabletteEDTPolytech.addMarqueur()
+const parkingVeloPolytech = new Marker("Parking vélo", 2.1714823681541526,48.70852181718405, velo, "hello world")
+parkingVeloPolytech.addMarqueur()
+//-----------------------------PUIO-------------------------------------------------------//
+const ateliers = new Marker ("Ateliers avec imprimantes 3D",2.1734456747269357,48.710884093565284, atelier, "Hello world")
+ateliers.addMarqueur()
 //--------------------------------------Lieu-de-vie-----------------------------------------//
 //cafetaria et restaurant universitaire 
 const cafetCantineLieuDeVie = new Marker ("Cafetaria et restaurant universitaire du lieu de Vie", 2.171465539968687,48.709506800652576, alimentation, "Cafetaria au rez de chaussé et cantine au deuxième étage")
@@ -111,8 +131,7 @@ salleSport.addMarqueur()
 const parkingVeloLV = new Marker("Parking vélo", 2.1712435199793916,48.70935200657226, velo, "hello world" )
 parkingVeloLV.addMarqueur()
 //--------------------------------------H-Bar---------------------------------------------------//
-const parkingVeloHBar = new Marker("Parking vélo", 2.1714823681541526,48.70852181718405, velo, "hello world")
-parkingVeloHBar.addMarqueur()
+
 //------------------------------------Elein-Gray---------------------------------------------//
 
 //-------------------------------------CS-Eiffel--------------------------------------------//
