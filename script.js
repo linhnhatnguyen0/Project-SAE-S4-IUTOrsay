@@ -69,13 +69,3 @@ function displayRoute(geojson) {
     },
   });
 }
-// var source = [2.1688376763699813, 48.7118157869293];
-// var destination = [2.169020066581464, 48.709663607193576];
-
-// map.addControl(new tt.FullscreenControl());
-// map.addControl(new tt.NavigationControl());
-
-// var markerSource = new tt.Marker().setLngLat(source).addTo(map);
-// var markerDestination = new tt.Marker().setLngLat(destination).addTo(map);
-
-// Replace 'your-api-key' with your actual TomTom API key
