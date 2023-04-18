@@ -510,14 +510,3 @@ function displayRoute(geojson) {
     },
   });
 }
-
-tt.services
-  .fuzzySearch({
-    key: "Ue34QD5EuCWqslTHMvMzNIAhGwxEWhbj",
-    query: query,
-    language: "fr-FR",
-  })
-  .then(function (response) {
-    console.log(response);
-    // Do something with response
-  });
