@@ -40,7 +40,8 @@ routeoptions.locations.push(source);
 routeoptions.locations.push(destination);
 
 routeoptions.traffic = false;
-routeoptions.travelMode = "pedestrian";
+// routeoptions.travelMode = "pedestrian";
+
 const button = document.querySelector("#buttonRoute");
 button.addEventListener("click", clickHandler);
 
@@ -48,6 +49,7 @@ function clickHandler() {
   try {
     tt.services.calculateRoute(routeoptions).then(function (response) {
       var geojson = response.toGeoJson();
+      console.log(geojson);
       displayRoute(geojson);
     });
   } catch (error) {
@@ -69,3 +71,14 @@ function displayRoute(geojson) {
     },
   });
 }
+
+tt.services
+  .fuzzySearch({
+    key: "Ue34QD5EuCWqslTHMvMzNIAhGwxEWhbj",
+    query: query,
+    language: "fr-FR",
+  })
+  .then(function (response) {
+    console.log(response);
+    // Do something with response
+  });
