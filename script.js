@@ -5,20 +5,50 @@ var map = tt.map({
 map.setZoom(17);
 map.setCenter([2.170936, 48.711115]);
 
+var alimentation = "alimentation";
+var espaceDetente = "espace détente";
+var eau = "eau";
+var toilettes = "toilettes";
+var sport = "sport";
+var velo = "vélo";
+
 class Marker {
-  constructor (nom, lat, lon, type, description, icone)
+  
+  constructor (nom, lat, lon, type, description)
   {
     this.nom = nom;
     this.lat = lat;
     this.lon = lon;
     this.type = type;
     this.description = description;
-    this.icone = icone;
+    if (this.type == alimentation)
+    {
+      this.icone = "./img/restaurant-icon.png";
+    }
+    if (this.type == espaceDetente)
+    {
+      this.icone = "./img/restaurant-icon.png";
+    }
+    if (this.type == eau)
+    {
+      this.icone = "./img/restaurant-icon.png";
+    }
+    if (this.type == toilettes)
+    {
+      this.icone = "./img/restaurant-icon.png";
+    }
+    if (this.type == sport)
+    {
+      this.icone = "./img/restaurant-icon.png";
+    }
+    if (this.type == velo)
+    {
+      this.icone = "./img/restaurant-icon.png";
+    }
   }
 
   addMarqueur ()
   {
-    var name = this.nom;
     var divElement = document.createElement("div");
     divElement.innerHTML =
     '<div class="marker"><img src=" '+this.icone +'" width="32" height="40"><p>'+this.nom+'</p></div>';
@@ -36,62 +66,53 @@ class Marker {
 //--------------------------------------ajout des marqueurs personnaliés---------------------------------------//
 
 //--------------------------------------------------IUT--------------------------------------//
-//cafet IUT
-
- const cafetIUT = new Marker("Cafeteria Amphi Hubert Coudane", 2.170191469892004, 48.710711586415286, "alimentation", "Hello world", "./img/restaurant-icon.png"  );
+//cafet 
+ const cafetIUT = new Marker("Cafeteria Amphi Hubert Coudane", 2.170191469892004, 48.710711586415286, alimentation, "Hello world"  );
  cafetIUT.addMarqueur() 
+
 //--------------------------------------------------Henri-Moissan-----------------------------------------------//
-//cafet moissan
-const CafetMoissan = new Marker("Cafeteria Henri Moissan", 2.1723943695285683,48.711530079110744, "alimentation", "Hello world", "./img/restaurant-icon.png" )
-var divElement2 = document.createElement("div");
-divElement2.innerHTML =
-  '<div class="marker"><img src="./img/restaurant-icon.png" width="32" height="40"><p>Cafeteria Henri Moissan</p></div>';
-var marker2 = new tt.Marker({
-  element: divElement2,
-})
-  .setLngLat([2.1723943695285683,48.711530079110744])
-  .addTo(map)
-  .setPopup(new tt.Popup().setHTML("<b>Hello world!</b>"));
+//cafet 
+const cafetMoissan = new Marker("Cafeteria Henri Moissan", 2.1723943695285683,48.711530079110744, alimentation, "Hello world")
+cafetMoissan.addMarqueur()
 
-
-//restaurant universitaire moissan
-var divElement2 = document.createElement("div");
-divElement2.innerHTML =
-  '<div class="marker"><img src="./img/restaurant-icon.png" width="32" height="40"><p>Restaurant universitaire Henri Moissan</p></div>';
-var marker2 = new tt.Marker({
-  element: divElement2,
-})
-  .setLngLat([2.172448013711649, 48.71101681800649])
-  .addTo(map)
-  .setPopup(new tt.Popup().setHTML("<b>Hello world!</b>"));
+//restaurant universitaire 
+const cantineMoissan = new Marker("Restaurant universitaire Henri Moissan", 2.172448013711649, 48.71101681800649, alimentation, "Hello world")
+cantineMoissan.addMarqueur()
 
 
 //------------------------------------Polytech-Paris-Saclay--------------------------------//
-
-
+const cafetPolytech = new Marker ("Cafetaria Polytech Paris Saclay", 2.171122, 48.709127,alimentation, "Hello world")
+cafetPolytech.addMarqueur()
 //--------------------------------------Lieu-de-vie-----------------------------------------//
-var divElement = document.createElement("div");
-divElement.innerHTML =
-  '<div class="marker"><img src="./img/restaurant-icon.png" width="32" height="40"><p>Cafetaria et restaurant universitaire du lieu de Vie</p></div>';
-var marker = new tt.Marker({
-  element: divElement,
-})
-  .setLngLat([2.171465539968687,48.709506800652576])
-  .addTo(map)
-  .setPopup(new tt.Popup().setHTML("<b>Hello world!</b>"));
+//cafetaria et restaurant universitaire 
+const cafetCantineLieuDeVie = new Marker ("Cafetaria et restaurant universitaire du lieu de Vie", 2.171465539968687,48.709506800652576, alimentation, "Cafetaria au rez de chaussé et cantine au deuxième étage")
+cafetCantineLieuDeVie.addMarqueur()
 
-  var divElement = document.createElement("div");
-  divElement.innerHTML =
-    '<div class="marker"><img src="./img/restaurant-icon.png" width="32" height="40"><p>Fontaine d eau</p></div>';
-  var marker = new tt.Marker({
-    element: divElement,
-  })
-    .setLngLat([2.171443, 48.709453])
-    .addTo(map)
-    .setPopup(new tt.Popup().setHTML("<b>Hello world!</b>"));
+//fontaine d'eau
+const fontaineEau = new Marker ("Fontaine d eau", 2.171443, 48.709453, eau, "se situe dans la cafetaria")
+fontaineEau.addMarqueur()
 
+//espace libre 
+const espaceLibre = new Marker("espace libre du lieu de vie", 2.171511037882402,48.709469029733384, espaceDetente ,"tables et babyfoot, se situe au premier étage")
+espaceLibre.addMarqueur()
+
+//toilettes
+const toilettesLV = new Marker("toilettes", 2.1710927506111553,48.70943900667484, toilettes, "se situe au premier étage")
+toilettesLV.addMarqueur()
+
+//terrain de basket
+const basket = new Marker ("Terrain de basket", 2.1714772813657746,48.70938670840104, sport, "se situe sur le toit ")
+basket.addMarqueur()
+
+//salle de sport
+const salleSport = new Marker ("Salle de sport SUAPS", 2.1709886295475402, 48.70957021829742, sport, "se situe au troisième étage")
+salleSport.addMarqueur()
+
+const parkingVeloLV = new Marker("Parking vélo", 2.1712435199793916,48.70935200657226, velo, "hello world" )
+parkingVeloLV.addMarqueur()
 //--------------------------------------H-Bar---------------------------------------------------//
-
+const parkingVeloHBar = new Marker("Parking vélo", 2.1714823681541526,48.70852181718405, velo, "hello world")
+parkingVeloHBar.addMarqueur()
 //------------------------------------Elein-Gray---------------------------------------------//
 
 //-------------------------------------CS-Eiffel--------------------------------------------//
