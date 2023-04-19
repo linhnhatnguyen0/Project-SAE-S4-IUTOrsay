@@ -1,3 +1,5 @@
+import { map } from "./script.js";
+
 var source = new tt.LngLat(2.1688376763699813, 48.7118157869293);
 var destination = new tt.LngLat(2.169020066581464, 48.709663607193576);
 
