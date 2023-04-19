@@ -524,8 +524,12 @@ function search() {
     .then(function (response) {
       // Récupère les informations sur le lieu à partir de la réponse
       var place = response.results[0];
-      console.log(response);
+      for (let index = 0; index < response.results.length; index++) {
+        const element = response.results[index];
+        console.log(element.address.freeformAddress);
+      }
 
+      console.log(place.address.freeformAddress);
       // Déplace la carte à la position du lieu
       map.flyTo({
         center: place.position,
