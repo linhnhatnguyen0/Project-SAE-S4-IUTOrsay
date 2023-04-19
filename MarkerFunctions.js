@@ -499,6 +499,10 @@ var map = tt.map({
   
 //---------------------------- Ajouter les markers a la map -------------------------//
 
+function showMore() {
+  alert("Vous avez cliqué sur le bouton Voir plus !");
+}
+
   markerData.forEach(marker => {
     var divElement = document.createElement("div");
     divElement.innerHTML =
@@ -508,13 +512,66 @@ var map = tt.map({
     })
       .setLngLat([marker.lat, marker.lng])
       .addTo(map)
-      .setPopup(new tt.Popup({ offset: 30}).setHTML("<b>" + marker.description + "</b><br><button>Voir plus</button>"));
+      .setPopup(new tt.Popup({ offset: 30}).setHTML("<b>" + marker.description + "</b><br><button onclick = showMore()> Voir plus</button>"));
       
   });
 
-  function showMore() {
-    alert("Vous avez cliqué sur le bouton Voir plus !");
-  }
+ //--------------------------------- Filtre -----------------------------------------//
 
+var button1 = document.getElementById('markerBtn0');
+button1.addEventListener('click', function() {
+  showMarkersOfType('alimentation');
+});
+
+var button2 = document.getElementById('markerBtn1');
+button2.addEventListener('click', function() {
+  showMarkersOfType('toilettes');
+});
+
+var button3 = document.getElementById('markerBtn2');
+button3.addEventListener('click', function() {
+  showMarkersOfType('espaceTravail');
+});
+
+var button1 = document.getElementById('markerBtn3');
+button1.addEventListener('click', function() {
+  showMarkersOfType('espaceLibre');
+});
+
+var button2 = document.getElementById('markerBtn4');
+button2.addEventListener('click', function() {
+  showMarkersOfType('renseignement');
+});
+
+var button3 = document.getElementById('markerBtn5');
+button3.addEventListener('click', function() {
+  showMarkersOfType('voiture');
+});
   
+var button3 = document.getElementById('markerBtn6');
+button3.addEventListener('click', function() {
+  showMarkersOfType('sport');
+});
+
+
+function showMarkersOfType(type) {
+  var markers = markerData;
+  if (type === "voiture"){
+    for (var i = 0; i < markers.length; i++) {
+      if ((markers[i].type === "voiture") || ((markers[i].type === "velo")) ){
+        markers[i].marker.setStyle({ visibility: "visible" });
+      } else {
+        markers[i].marker.setStyle({ visibility: "hidden" });
+      }
+    }
+  } else {
+    for (var i = 0; i < markers.length; i++) {
+      if ((markers[i].type === type) ){
+        markers[i].marker.setStyle({ visibility: "visible" });
+      } else {
+        markers[i].marker.setStyle({ visibility: "hidden" });
+      }
+    }
+  }
+}
   
