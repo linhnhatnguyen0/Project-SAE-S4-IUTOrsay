@@ -393,78 +393,78 @@ parkingVeloHBar.addMarqueur();
 // créer une instance d'autocomplétion
 //var autocomplete = new H.places.Autocomplete(searchOptions);
 
-//création de la searchBox
-var searchOptions = {
-  key: "Ue34QD5EuCWqslTHMvMzNIAhGwxEWhbj",
-  limit: 5,
-  idxSet: "POI,Geo",
-  language: "fr-FR",
+// //création de la searchBox
+// var searchOptions = {
+//   key: "Ue34QD5EuCWqslTHMvMzNIAhGwxEWhbj",
+//   limit: 5,
+//   idxSet: "POI,Geo",
+//   language: "fr-FR",
 
-  autocomplete: {
-    enabled: true, // active l'autocomplétion
-    minLength: 2, // nombre minimum de caractères avant de lancer l'autocomplétion
-    debounceTime: 100, // délai avant d'envoyer une requête au serveur après la saisie de l'utilisateur
-    categories: [
-      {
-        filter: "categorySet=POI",
-        searchIn: "name",
-        label: "Points d'intérêt",
-      },
-      {
-        filter: "categorySet=Address",
-        searchIn: "address",
-        label: "Adresses",
-      },
-    ],
-  },
-};
+//   autocomplete: {
+//     enabled: true, // active l'autocomplétion
+//     minLength: 2, // nombre minimum de caractères avant de lancer l'autocomplétion
+//     debounceTime: 100, // délai avant d'envoyer une requête au serveur après la saisie de l'utilisateur
+//     categories: [
+//       {
+//         filter: "categorySet=POI",
+//         searchIn: "name",
+//         label: "Points d'intérêt",
+//       },
+//       {
+//         filter: "categorySet=Address",
+//         searchIn: "address",
+//         label: "Adresses",
+//       },
+//     ],
+//   },
+// };
 
-var ttSearchBox = new tt.plugins.SearchBox(tt.services, searchOptions);
+// var ttSearchBox = new tt.plugins.SearchBox(tt.services, searchOptions);
 
-map.addControl(ttSearchBox, "top-left");
+// map.addControl(ttSearchBox, "top-left");
 
-window.addEventListener("load", function () {
-  // Lorsqu'un utilisateur soumet une recherche
-  ttSearchBox.on("submit", function (event) {
-    // Empêche le formulaire de se recharger la page
-    event.preventDefault();
-    // Récupère la requête de recherche
-    var query = event.data;
+// window.addEventListener("load", function () {
+//   // Lorsqu'un utilisateur soumet une recherche
+//   ttSearchBox.on("submit", function (event) {
+//     // Empêche le formulaire de se recharger la page
+//     event.preventDefault();
+//     // Récupère la requête de recherche
+//     var query = event.data;
 
-    // Effectue une recherche géocodée pour récupérer les informations sur le lieu
-    tt.services
-      .fuzzySearch({
-        key: "Ue34QD5EuCWqslTHMvMzNIAhGwxEWhbj",
-        query: query,
-        language: "fr-FR",
-      })
-      .then(function (response) {
-        // Récupère les informations sur le lieu à partir de la réponse
-        var place = response.results[0];
+//     // Effectue une recherche géocodée pour récupérer les informations sur le lieu
+//     tt.services
+//       .fuzzySearch({
+//         key: "Ue34QD5EuCWqslTHMvMzNIAhGwxEWhbj",
+//         query: query,
+//         language: "fr-FR",
+//       })
+//       .then(function (response) {
+//         // Récupère les informations sur le lieu à partir de la réponse
+//         var place = response.results[0];
 
-        // Déplace la carte à la position du lieu
-        map.flyTo({
-          center: place.position,
-        });
+//         // Déplace la carte à la position du lieu
+//         map.flyTo({
+//           center: place.position,
+//         });
 
-        // Ajoute un marqueur à la position du lieu
-        var marker = new tt.Marker().setLngLat(place.position).addTo(map);
+//         // Ajoute un marqueur à la position du lieu
+//         var marker = new tt.Marker().setLngLat(place.position).addTo(map);
 
-        // Affiche les informations sur le lieu dans une fenêtre contextuelle
-        var popup = new tt.Popup({ offset: 30 }).setHTML(
-          "<h3>" +
-            place.address.freeformAddress +
-            "</h3><p>" +
-            place.poi.name +
-            "</p>"
-        );
-        marker.setPopup(popup).togglePopup();
-      })
-      .catch(function (error) {
-        console.error(error);
-      });
-  });
-});
+//         // Affiche les informations sur le lieu dans une fenêtre contextuelle
+//         var popup = new tt.Popup({ offset: 30 }).setHTML(
+//           "<h3>" +
+//             place.address.freeformAddress +
+//             "</h3><p>" +
+//             place.poi.name +
+//             "</p>"
+//         );
+//         marker.setPopup(popup).togglePopup();
+//       })
+//       .catch(function (error) {
+//         console.error(error);
+//       });
+//   });
+// });
 
 var source = new tt.LngLat(2.1688376763699813, 48.7118157869293);
 var destination = new tt.LngLat(2.169020066581464, 48.709663607193576);
@@ -481,11 +481,12 @@ routeoptions.locations.push(destination);
 routeoptions.traffic = false;
 // routeoptions.travelMode = "pedestrian";
 
-const button = document.querySelector("#buttonRoute");
-button.addEventListener("click", clickHandler);
+const buttonRoute = document.querySelector("#buttonRoute");
+buttonRoute.addEventListener("click", clickHandler);
 
 function clickHandler() {
   try {
+    search();
     tt.services.calculateRoute(routeoptions).then(function (response) {
       var geojson = response.toGeoJson();
       console.log(geojson);
@@ -511,13 +512,36 @@ function displayRoute(geojson) {
   });
 }
 
-tt.services
-  .fuzzySearch({
-    key: "Ue34QD5EuCWqslTHMvMzNIAhGwxEWhbj",
-    query: query,
-    language: "fr-FR",
-  })
-  .then(function (response) {
-    console.log(response);
-    // Do something with response
-  });
+const input = document.querySelector("input");
+
+function search() {
+  tt.services
+    .fuzzySearch({
+      key: "Ue34QD5EuCWqslTHMvMzNIAhGwxEWhbj",
+      query: input.value,
+      language: "fr-FR",
+    })
+    .then(function (response) {
+      // Récupère les informations sur le lieu à partir de la réponse
+      var place = response.results[0];
+      console.log(response);
+
+      // Déplace la carte à la position du lieu
+      map.flyTo({
+        center: place.position,
+      });
+
+      // Ajoute un marqueur à la position du lieu
+      var marker = new tt.Marker().setLngLat(place.position).addTo(map);
+
+      // Affiche les informations sur le lieu dans une fenêtre contextuelle
+      var popup = new tt.Popup({ offset: 30 }).setHTML(
+        "<h3>" +
+          place.address.freeformAddress +
+          "</h3><p>" +
+          place.poi.name +
+          "</p>"
+      );
+      marker.setPopup(popup).togglePopup();
+    });
+}
