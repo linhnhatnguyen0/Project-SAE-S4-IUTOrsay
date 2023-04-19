@@ -9,7 +9,7 @@ var map = tt.map({
 
   map.on('load', function() {
     addIconsToMarkers(jsonFilePath);
-  //  addMarkersToMap(jsonFilePath);
+    addMarkersToMap(jsonFilePath);
 });
 
 //---------------------------- Ajouter les icons au marker ---------------------//
@@ -36,10 +36,17 @@ function addIconsToMarkers(jsonFilePath) {
           icon: iconMap[marker.type] || ""
         }));
   
-        fetch(jsonFilePath, {
-          method: "PUT",
-          body: JSON.stringify({ markerData: markersWithIcons })
-        })
+        fetch(jsonFilePath)
+          .then(response => response.json())
+          .then(data => {
+            data.markerData = markersWithIcons;
+            return fetch(jsonFilePath, {
+              method: "GET", // Change the HTTP method to GET
+              headers: {
+                "Content-Type": "application/json"
+              }
+            })
+          })
           .then(() => {
             console.log('Fichier mis à jour avec les icônes ajoutées!');
           })
@@ -51,6 +58,8 @@ function addIconsToMarkers(jsonFilePath) {
         console.error(err);
       });
   }
+  
+
  // addIconsToMarkers(jsonFilePath);
 
 //---------------------------- Ajouter les markers a la map -------------------------//
@@ -65,7 +74,7 @@ function addMarkersToMap(jsonFilePath) {
             element: document.createElement('div'),
             anchor: 'bottom',
             draggable: false,
-            position: [marker.lon, marker.lat],
+            position: [marker.lat, marker.lon],
             icon: {
               url: marker.icon,
               size: [50, 50],
