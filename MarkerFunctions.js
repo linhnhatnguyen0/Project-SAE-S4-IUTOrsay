@@ -508,8 +508,13 @@ var map = tt.map({
     })
       .setLngLat([marker.lat, marker.lng])
       .addTo(map)
-      .setPopup(new tt.Popup().setHTML("<b>" + marker.description + "</b>"));
+      .setPopup(new tt.Popup({ offset: 30}).setHTML("<b>" + marker.description + "</b><br><button>Voir plus</button>"));
+      
   });
+
+  function showMore() {
+    alert("Vous avez cliqué sur le bouton Voir plus !");
+  }
 
   
   
