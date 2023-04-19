@@ -8,59 +8,8 @@ var map = tt.map({
   const jsonFilePath = "markerData.json";
 
   map.on('load', function() {
-    addIconsToMarkers(jsonFilePath);
     addMarkersToMap(jsonFilePath);
 });
-
-//---------------------------- Ajouter les icons au marker ---------------------//
-
-
-function addIconsToMarkers(jsonFilePath) {
-    fetch(jsonFilePath)
-      .then(response => response.json())
-      .then(markerData => {
-        const iconMap = {
-          velo: "img/velo.png",
-          voiture: "img/voiture.png",
-          alimentation : "img/restaurant-icon.png",
-          eau : "img/eau.png",
-          toilettes : "img/toilettes.png",
-          sport : "img/sport.png",
-          espaceTravail : "img/travail.png",
-          renseignement : "img/rens.png",
-          espaceLibre : "detente.png",
-        };
-  
-        const markersWithIcons = markerData.markerData.map(marker => ({
-          ...marker,
-          icon: iconMap[marker.type] || ""
-        }));
-  
-        fetch(jsonFilePath)
-          .then(response => response.json())
-          .then(data => {
-            data.markerData = markersWithIcons;
-            return fetch(jsonFilePath, {
-              method: "GET", // Change the HTTP method to GET
-              headers: {
-                "Content-Type": "application/json"
-              }
-            })
-          })
-          .then(() => {
-            console.log('Fichier mis à jour avec les icônes ajoutées!');
-          })
-          .catch(err => {
-            console.error(err);
-          });
-      })
-      .catch(err => {
-        console.error(err);
-      });
-  }
-  
-
- // addIconsToMarkers(jsonFilePath);
 
 //---------------------------- Ajouter les markers a la map -------------------------//
 
@@ -74,13 +23,14 @@ function addMarkersToMap(jsonFilePath) {
             element: document.createElement('div'),
             anchor: 'bottom',
             draggable: false,
-            position: [marker.lat, marker.lon],
             icon: {
               url: marker.icon,
               size: [50, 50],
               anchor: 'bottom',
             },
-          });
+          })
+          .setLngLat([marker.lat, marker.lng])
+          .addTo(map);
   
           // Ajouter un événement de clic pour afficher une info-bulle avec les détails du marqueur
           ttMarker.on('click', () => {
@@ -90,20 +40,28 @@ function addMarkersToMap(jsonFilePath) {
             `);
             ttMarker.setPopup(popup).togglePopup();
           });
-  
-          return ttMarker;
-        });
-  
-        markers.forEach(marker => {
-          marker.addTo(map);
         });
       })
       .catch(err => {
         console.error(err);
       });
   }
-  
-  
 
- 
+  addMarqueur() {
+    var divElement = document.createElement("div");
+    divElement.innerHTML =
+      '<div class="marker"><img src=" ' +
+      this.icone +
+      '" width="22" height="26"></div>';
+    var marker = new tt.Marker({
+      element: divElement,
+    })
+      .setLngLat([this.lat, this.lon])
+      .addTo(map)
+      .setPopup(new tt.Popup().setHTML("<b>" + this.description + "</b>"));
+    var lat = this.lat;
+    var lon = this.lon;
+    divElement.addEventListener("click", markerHandler(lat, lon));
+  }
+  
   
