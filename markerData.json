@@ -61,7 +61,7 @@
       "lng": 48.709053864600776,
       "type": "espaceLibre",
       "description": "Hello world",
-      "icon": "./detente.png"
+      "icon": "./img/detente.png"
     },
     {
       "nom": "Toilettes Polytech",
@@ -77,7 +77,7 @@
       "lng": 48.70896075726918,
       "type": "espaceLibre",
       "description": "Hello world",
-      "icon": "./detente.png"
+      "icon": "./img/detente.png"
     },
     {
       "nom": "Toilettes Polytech",
@@ -341,7 +341,7 @@
       "lng": 48.709469029733384,
       "type": "espaceLibre",
       "description": "tables et babyfoot, se situe au premier étage",
-      "icon": "./detente.png"
+      "icon": "./img/detente.png"
     },
     {
       "nom": "toilettes",
@@ -437,7 +437,7 @@
       "lng": 48.710669184320864,
       "type": "espaceLibre",
       "description": "se situe au premier étage",
-      "icon": "./detente.png"
+      "icon": "./img/detente.png"
     },
     {
       "nom": "espace libre centrale",
@@ -445,7 +445,7 @@
       "lng": 48.71022832939698,
       "type": "espaceLibre",
       "description": "se situe au premier étage",
-      "icon": "./detente.png"
+      "icon": "./img/detente.png"
     },
     {
       "nom": "parking voiture",
