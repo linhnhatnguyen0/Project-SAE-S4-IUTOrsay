@@ -1,0 +1,493 @@
+{"markerData" : [
+    {
+      "nom": "parking vello",
+      "lat": 2.1714823681541526,
+      "lon": 48.70852181718405,
+      "type": "velo",
+      "description": "Hello world",
+      "icon": ""
+    },
+    {
+      "nom": "parking vello",
+      "lat": 2.1717472239165168,
+      "lon": 48.708809273368814,
+      "type": "velo",
+      "description": "Hello world",
+      "icon": ""
+    },
+    {
+      "nom": "parking vello",
+      "lat": 2.1713686608967158,
+      "lon": 48.71044486115616,
+      "type": "velo",
+      "description": "Hello world",
+      "icon": ""
+    },
+    {
+      "nom": "parking vello",
+      "lat": 2.168814603149155,
+      "lon": 48.71016106493906,
+      "type": "velo",
+      "description": "Hello world",
+      "icon": ""
+    },
+    {
+      "nom": "parking voiture",
+      "lat": 2.1709441163198564,
+      "lon": 48.70859174551018,
+      "type": "voiture",
+      "description": "Hello world",
+      "icon": ""
+    },
+    {
+      "nom": "Acceuil Polytech",
+      "lat": 2.17132188393273,
+      "lon": 48.708987042864635,
+      "type": "renseignement",
+      "description": "Hello world",
+      "icon": ""
+    },
+    {
+      "nom": "salle libre service",
+      "lat": 2.1709010620321796,
+      "lon": 48.70895845832055,
+      "type": "espaceTravail",
+      "description": "Hello world",
+      "icon": ""
+    },
+    {
+      "nom": "terrasse Polytech",
+      "lat": 2.171237255185466,
+      "lon": 48.709053864600776,
+      "type": "espaceLibre",
+      "description": "Hello world",
+      "icon": ""
+    },
+    {
+      "nom": "Toilettes Polytech",
+      "lat": 2.170941126501224,
+      "lon": 48.70905846248925,
+      "type": "toilettes",
+      "description": "Hello world",
+      "icon": ""
+    },
+    {
+      "nom": "coins pour manger Polytech",
+      "lat": 2.171376609860404,
+      "lon": 48.70896075726918,
+      "type": "espaceLibre",
+      "description": "Hello world",
+      "icon": ""
+    },
+    {
+      "nom": "Toilettes Polytech",
+      "lat": 2.1715763686799257,
+      "lon": 48.70893574291631,
+      "type": "toilettes",
+      "description": "Hello world",
+      "icon": ""
+    },
+    {
+      "nom": "Toilettes Polytech",
+      "lat": 2.1714165004830206,
+      "lon": 48.708892001257,
+      "type": "toilettes",
+      "description": "Hello world",
+      "icon": ""
+    },
+    {
+      "nom": "Acceuil IUT",
+      "lat": 2.174546879630951,
+      "lon": 48.70926204995699,
+      "type": "renseignement",
+      "description": "Hello world",
+      "icon": ""
+    },
+    {
+      "nom": "Amphi Coudane",
+      "lat": 2.170275999450628,
+      "lon": 48.71070156395251,
+      "type": "espaceTravail",
+      "description": "Hello world",
+      "icon": ""
+    },
+    {
+      "nom": "Amphi 1",
+      "lat": 2.1705041275775216,
+      "lon": 48.71071159948022,
+      "type": "espaceTravail",
+      "description": "Hello world",
+      "icon": ""
+    },
+    {
+      "nom": "Amphi 2",
+      "lat": 2.1707839647465104,
+      "lon": 48.71070557816384,
+      "type": "espaceTravail",
+      "description": "Hello world",
+      "icon": ""
+    },
+    {
+      "nom": "infermerie",
+      "lat": 2.170345958742877,
+      "lon": 48.711066855872076,
+      "type": "renseignement",
+      "description": "Hello world",
+      "icon": ""
+    },
+    {
+      "nom": "salle libre service",
+      "lat": 2.170856965747116,
+      "lon": 48.711191295370924,
+      "type": "espaceTravail",
+      "description": "Hello world",
+      "icon": ""
+    },
+    {
+      "nom": "Médiathèque IUT",
+      "lat": 2.1709786340814596,
+      "lon": 48.71126756458912,
+      "type": "espaceTravail",
+      "description": "Hello world",
+      "icon": ""
+    },
+    {
+      "nom": "Toilettes IUT",
+      "lat": 2.1707626727880007,
+      "lon": 48.711285628334366,
+      "type": "toilettes",
+      "description": "Hello world",
+      "icon": ""
+    },
+    {
+      "nom": "Toilettes IUT",
+      "lat": 2.1706866300790364,
+      "lon": 48.71117323159183,
+      "type": "toilettes",
+      "description": "Hello world",
+      "icon": ""
+    },
+    {
+      "nom": "Toilettes IUT",
+      "lat": 2.1714208363723126,
+      "lon": 48.71081819195018,
+      "type": "toilettes",
+      "description": "Hello world",
+      "icon": ""
+    },
+    {
+      "nom": "secriteriat",
+      "lat": 2.1714765096606183,
+      "lon": 48.71108519113125,
+      "type": "renseignement",
+      "description": "Hello world",
+      "icon": ""
+    },
+    {
+      "nom": "salle I118",
+      "lat": 2.1714994690407976,
+      "lon": 48.71113190327591,
+      "type": "espaceTravail",
+      "description": "libre service + imprimante",
+      "icon": ""
+    },
+    {
+      "nom": "salle I120",
+      "lat": 2.1714975557591156,
+      "lon": 48.71107509120236,
+      "type": "espaceTravail",
+      "description": "libre service + imprimante",
+      "icon": ""
+    },
+    {
+      "nom": "Toilettes IUT",
+      "lat": 2.1714975557591156,
+      "lon": 48.711280876853095,
+      "type": "toilettes",
+      "description": "en premier et deuxième étages",
+      "icon": ""
+    },
+    {
+      "nom": "Toilettes IUT",
+      "lat": 2.1714975557591156,
+      "lon": 48.711280876853095,
+      "type": "toilettes",
+      "description": "en premier et deuxiéme étages",
+      "icon": ""
+    },
+    {
+      "nom": "Toilettes IUT",
+      "lat": 2.1714750657415998,
+      "lon": 48.71080437470084,
+      "type": "toilettes",
+      "description": "en premier et deuxiéme étages",
+      "icon": ""
+    },
+    {
+      "nom": "Toilettes IUT",
+      "lat": 2.1700640105576436,
+      "lon": 48.710716923373184,
+      "type": "toilettes",
+      "description": "Hello world",
+      "icon": ""
+    },
+    {
+      "nom": "Toilettes IUT",
+      "lat": 2.1711500603000893,
+      "lon": 48.71076778178764,
+      "type": "toilettes",
+      "description": "Hello world",
+      "icon": ""
+    },
+    {
+      "nom": "salle MP",
+      "lat": 2.1711324031257377,
+      "lon": 48.710577573433085,
+      "type": "espaceTravail",
+      "description": "libre service + imprimante",
+      "icon": ""
+    },
+    {
+      "nom": "Toilettes IUT",
+      "lat": 2.1702294781091482,
+      "lon": 48.71021967433933,
+      "type": "toilettes",
+      "description": "Hello world",
+      "icon": ""
+    },
+    {
+      "nom": "salle chimie",
+      "lat": 2.1704959663952947,
+      "lon": 48.71021553676266,
+      "type": "espaceTravail",
+      "description": "libre service + imprimante",
+      "icon": ""
+    },
+    {
+      "nom": "parking voiture",
+      "lat": 2.170216937483918,
+      "lon": 48.70991349274732,
+      "type": "voiture",
+      "description": "Hello world",
+      "icon": ""
+    },
+    {
+      "nom": "parking voiture prof",
+      "lat": 2.171052450997913,
+      "lon": 48.711405511637196,
+      "type": "voiture",
+      "description": "Hello world",
+      "icon": ""
+    },
+    {
+      "nom": "Cafeteria Amphi Hubert Coudane",
+      "lat": 2.169910351645844,
+      "lon": 48.71072595849432,
+      "type": "alimentation",
+      "description": "Hello world",
+      "icon": ""
+    },
+    {
+      "nom": "Cafeteria Henri Moissan",
+      "lat": 2.171912772260336,
+      "lon": 48.71158296535447,
+      "type": "alimentation",
+      "description": "Hello world",
+      "icon": ""
+    },
+    {
+      "nom": "Cafeteria Henri Moissan",
+      "lat": 2.1724334393968983,
+      "lon": 48.71158521085832,
+      "type": "alimentation",
+      "description": "Hello world",
+      "icon": ""
+    },
+    {
+      "nom": "Restaurant universitaire Henri Moissan",
+      "lat": 2.171912772260336,
+      "lon": 48.71134269586497,
+      "type": "alimentation",
+      "description": "Hello world",
+      "icon": ""
+    },
+    {
+      "nom": "Cafetaria Polytech Paris Saclay",
+      "lat": 2.171227492844988,
+      "lon": 48.709005619731016,
+      "type": "alimentation",
+      "description": "Hello world",
+      "icon": ""
+    },
+    {
+      "nom": "Cafetaria et restaurant universitaire du lieu de Vie",
+      "lat": 2.171465539968687,
+      "lon": 48.709506800652576,
+      "type": "alimentation",
+      "description": "Cafetaria au rez de chaussé et cantine au deuxième étage",
+      "icon": ""
+    },
+    {
+      "nom": "Fontaine d eau",
+      "lat": 2.171443,
+      "lon": 48.709453,
+      "type": "eau",
+      "description": "se situe dans la cafetaria",
+      "icon": ""
+    },
+    {
+      "nom": "espace libre du lieu de vie",
+      "lat": 2.171511037882402,
+      "lon": 48.709469029733384,
+      "type": "espaceLibre",
+      "description": "tables et babyfoot, se situe au premier étage",
+      "icon": ""
+    },
+    {
+      "nom": "toilettes",
+      "lat": 2.1711107506111553,
+      "lon": 48.70943900667484,
+      "type": "toilettes",
+      "description": "se situe au premier étage",
+      "icon": ""
+    },
+    {
+      "nom": "Terrain de basket",
+      "lat": 2.1714772813657746,
+      "lon": 48.70938670840104,
+      "type": "sport",
+      "description": "se situe sur le toit ",
+      "icon": ""
+    },
+    {
+      "nom": "Salle de sport SUAPS",
+      "lat": 2.171015388125636,
+      "lon": 48.70945117528322,
+      "type": "sport",
+      "description": "se situe au troisième étage",
+      "icon": ""
+    },
+    {
+      "nom": "Parking vélo",
+      "lat": 2.1712435199793916,
+      "lon": 48.70935200657226,
+      "type": "velo",
+      "description": "hello world",
+      "icon": ""
+    },
+    {
+      "nom": "Parking vélo",
+      "lat": 2.1714823681541526,
+      "lon": 48.70852181718405,
+      "type": "velo",
+      "description": "hello world",
+      "icon": ""
+    },
+    {
+      "nom": "Acceuil Centrale",
+      "lat": 2.1680084206158887,
+      "lon": 48.71063612033555,
+      "type": "renseignement",
+      "description": "acceuil de centrale supelec",
+      "icon": ""
+    },
+    {
+      "nom": "toilettes",
+      "lat": 2.1682088503201533,
+      "lon": 48.710360586279705,
+      "type": "toilettes",
+      "description": "se situe au premier étage",
+      "icon": ""
+    },
+    {
+      "nom": "Restaurant universitaire de Centrale",
+      "lat": 2.1670480282829545,
+      "lon": 48.71055897095198,
+      "type": "alimentation",
+      "description": "Hello world",
+      "icon": ""
+    },
+    {
+      "nom": "Cafetaria Centrale",
+      "lat": 2.1667974911526238,
+      "lon": 48.71033854349005,
+      "type": "alimentation",
+      "description": "Hello world",
+      "icon": ""
+    },
+    {
+      "nom": "Centre des langues",
+      "lat": 2.166672222587459,
+      "lon": 48.71002994342106,
+      "type": "renseignement",
+      "description": "au toixieme etage centre des langues",
+      "icon": ""
+    },
+    {
+      "nom": "Médiathèque Centrale",
+      "lat": 2.1670480282829545,
+      "lon": 48.70987564267679,
+      "type": "espaceTravail",
+      "description": "Hello world",
+      "icon": ""
+    },
+    {
+      "nom": "espace libre centrale",
+      "lat": 2.167540751305938,
+      "lon": 48.710669184320864,
+      "type": "espaceLibre",
+      "description": "se situe au premier étage",
+      "icon": ""
+    },
+    {
+      "nom": "espace libre centrale",
+      "lat": 2.1677411810102027,
+      "lon": 48.71022832939698,
+      "type": "espaceLibre",
+      "description": "se situe au premier étage",
+      "icon": ""
+    },
+    {
+      "nom": "parking voiture",
+      "lat": 2.1733673290953752,
+      "lon": 48.71198522897407,
+      "type": "voiture",
+      "description": "Hello world",
+      "icon": ""
+    },
+    {
+      "nom": "parking voiture",
+      "lat": 2.1691801666756403,
+      "lon": 48.70993283619873,
+      "type": "voiture",
+      "description": "Hello world",
+      "icon": ""
+    },
+    {
+      "nom": "scolarité",
+      "lat": 2.170664236263446,
+      "lon": 48.711186158396686,
+      "type": "renseignement",
+      "description": "scolarité de l'iut",
+      "icon": ""
+    },
+    {
+      "nom": "Plaque d'information",
+      "lat": 2.1673506719776725,
+      "lon": 48.71034368972826,
+      "type": "renseignement",
+      "description": "un ecran qui permet d'avoir plus d'information sur centrale supelec",
+      "icon": ""
+    },
+    {
+      "nom": "toilettes",
+      "lat": 2.167073980574709,
+      "lon": 48.710317546410124,
+      "type": "toilettes",
+      "description": "",
+      "icon": ""
+    }
+  ]
+}
+  
+  
