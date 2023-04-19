@@ -4,7 +4,7 @@ var map = tt.map({
 });
 map.setZoom(17);
 map.setCenter([2.170936, 48.711115]);
-
+/*
 var alimentation = "alimentation";
 var espaceDetente = "espace détente";
 var eau = "eau";
@@ -56,7 +56,8 @@ class Marker {
       this.icone = "./img/restaurant-icon.png";
     }
   }
-
+  */
+/*
   addMarqueur ()
   {
     var divElement = document.createElement("div");
@@ -70,8 +71,8 @@ class Marker {
   .setPopup(new tt.Popup().setHTML("<b>" +this.description+ "</b>"));
   }
 }
-
-
+*/
+/*
 
 //--------------------------------------ajout des marqueurs personnaliés---------------------------------------//
 
@@ -88,7 +89,7 @@ cafetMoissan.addMarqueur()
 //restaurant universitaire 
 const cantineMoissan = new Marker("Restaurant universitaire Henri Moissan", 2.172448013711649, 48.71101681800649, alimentation, "Hello world")
 cantineMoissan.addMarqueur()
-
+ 
 
 //------------------------------------Polytech-Paris-Saclay--------------------------------//
 const cafetPolytech = new Marker ("Cafetaria Polytech Paris Saclay", 2.171122, 48.709127,alimentation, "Hello world")
@@ -148,20 +149,34 @@ map.on("zoomend", function () {
     console.log("add");
   }
 });
+*/
 
-
-
+/*
 // créer une instance d'autocomplétion
 //var autocomplete = new H.places.Autocomplete(searchOptions);
 
 //création de la searchBox
+
+var searchOptions = {
+  key: 'Ue34QD5EuCWqslTHMvMzNIAhGwxEWhbj',
+  language: 'fr-FR',
+  limit: 5
+};
+
+// Options for the autocomplete service
+var autocompleteOptions = {
+  key: 'Ue34QD5EuCWqslTHMvMzNIAhGwxEWhbj',
+  language: 'fr-FR'
+};
  var searchOptions= {
-      key: 'Ue34QD5EuCWqslTHMvMzNIAhGwxEWhbj',
+      //key: 'Ue34QD5EuCWqslTHMvMzNIAhGwxEWhbj',
       limit: 5,
       idxSet: 'POI,Geo',
       language: 'fr-FR',
+      searchOptions: searchOptions,
+      autocompleteOptions: autocompleteOptions
 
-      autocomplete: {
+      /*autocomplete: {
         enabled: true, // active l'autocomplétion
         minLength: 2, // nombre minimum de caractères avant de lancer l'autocomplétion
         debounceTime: 100, // délai avant d'envoyer une requête au serveur après la saisie de l'utilisateur
@@ -186,7 +201,8 @@ var ttSearchBox = new tt.plugins.SearchBox(tt.services, searchOptions)
 
 map.addControl(ttSearchBox, "top-left")
 
-window.addEventListener('load', function() {
+
+/*window.addEventListener('load', function() {
   // Lorsqu'un utilisateur soumet une recherche
   ttSearchBox.on('submit', function(event) {
   // Empêche le formulaire de se recharger la page
@@ -222,4 +238,4 @@ window.addEventListener('load', function() {
   });
 });
   });
-
+*/
