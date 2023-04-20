@@ -510,10 +510,10 @@ function showMore() {
     var marker = new tt.Marker({
       element: divElement,
     })
+    
       .setLngLat([marker.lat, marker.lng])
       .addTo(map)
-      .setPopup(new tt.Popup({ offset: 30}).setHTML("<b>" + marker.description + "</b><br><button onclick = showMore()> Voir plus</button>"));
-      
+      .setPopup(new tt.Popup({ offset: 30}).setHTML("<b>" + marker.description + "</b><br><button onclick = showMore()> Voir plus</button>"));   
   });
 
  //--------------------------------- Filtre -----------------------------------------//
@@ -557,19 +557,19 @@ button3.addEventListener('click', function() {
 function showMarkersOfType(type) {
   var markers = markerData;
   if (type === "voiture"){
-    for (var i = 0; i < markers.length; i++) {
-      if ((markers[i].type === "voiture") || ((markers[i].type === "velo")) ){
-        markers[i].marker.setStyle({ visibility: "visible" });
+    for (var i = 0; i < markerData.length; i++) {
+      if ((markerData[i].type === "voiture") || ((markerData[i].type === "velo")) ){
+        markerData[i].setVisible(true);
       } else {
-        markers[i].marker.setStyle({ visibility: "hidden" });
+        markerData[i].setVisible(false);
       }
     }
   } else {
-    for (var i = 0; i < markers.length; i++) {
-      if ((markers[i].type === type) ){
-        markers[i].marker.setStyle({ visibility: "visible" });
+    for (var i = 0; i < markerData.length; i++) {
+      if ((markerData[i].type === type) ){
+        markerData[i].setVisible(true);
       } else {
-        markers[i].marker.setStyle({ visibility: "hidden" });
+        markerData[i].setVisible(false);
       }
     }
   }
