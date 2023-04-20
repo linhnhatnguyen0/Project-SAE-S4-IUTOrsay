@@ -13,23 +13,59 @@
       type="text/css"
       href="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.23.0/maps/maps.css"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://api.tomtom.com/maps-sdk-for-web/cdn/plugins/SearchBox/3.1.12/SearchBox.css"
+    />
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </head>
   <header>
     <ul>
-      <li><button id = "markerBtn0" class="markerBtn">Restaurant</button></li>
-      <li><button id = "markerBtn1" class="markerBtn">Toilettes</button></li>
-      <li><button id = "markerBtn2" class="markerBtn">taravail</button></li>
-      <li><button id = "markerBtn3" class="markerBtn">detante</button></li>
-      <li><button id = "markerBtn4" class="markerBtn">renseignement</button></li>
-      <li><button id = "markerBtn5" class="markerBtn">parking</button></li>
-      <li><button id = "markerBtn6" class="markerBtn">sport</button></li>
+      <li><button id="markerBtn0" class="markerBtn">Restaurant</button></li>
+      <li><button id="markerBtn1" class="markerBtn">Toilettes</button></li>
+      <li><button id="markerBtn2" class="markerBtn">taravail</button></li>
+      <li><button id="markerBtn3" class="markerBtn">detante</button></li>
+      <li><button id="markerBtn4" class="markerBtn">renseignement</button></li>
+      <li><button id="markerBtn5" class="markerBtn">parking</button></li>
+      <li><button id="markerBtn6" class="markerBtn">sport</button></li>
     </ul>
   </header>
 
   <body>
     <div id="map" class="map"></div>
+    <button id="buttonRoute" type="button" style="z-index: 4">
+      Calculate Route
+    </button>
+    <section>
+      <div class="result">
+        <div class="result-img">
+          <img src="https://via.placeholder.com/150" alt="result-img" />
+        </div>
+        <div class="result-text">
+          <h3>Cafeteria Hubert-Coudane</h3>
+          <p id="type">Cafeteria</p>
+          <ion-icon name="walk"></ion-icon>
+          <span>3 mins</span>
+        </div>
+      </div>
+    </section>
+    <div class="input">
+      <input type="text" />
+      <div class="autocomplete">
+        <ul id="list"></ul>
+      </div>
+    </div>
+
     <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.23.0/maps/maps-web.min.js"></script>
     <script type="module" src="MarkerFunctions.js"></script>
   </body>
