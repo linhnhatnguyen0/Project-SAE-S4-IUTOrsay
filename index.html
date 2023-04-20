@@ -30,10 +30,18 @@
     ></script>
   </head>
   <header>
-    <ul>
+    <ul id="filterList1">
       <li><button id="markerBtn0" class="markerBtn">Restaurant</button></li>
       <li><button id="markerBtn1" class="markerBtn">Toilettes</button></li>
       <li><button id="markerBtn2" class="markerBtn">taravail</button></li>
+    </ul>
+    <div class="input">
+      <input type="text" />
+      <div class="autocomplete">
+        <ul id="list"></ul>
+      </div>
+    </div>
+    <ul id="filterList2">
       <li><button id="markerBtn3" class="markerBtn">detante</button></li>
       <li><button id="markerBtn4" class="markerBtn">renseignement</button></li>
       <li><button id="markerBtn5" class="markerBtn">parking</button></li>
@@ -46,7 +54,7 @@
     <button id="buttonRoute" type="button" style="z-index: 4">
       Calculate Route
     </button>
-    <section>
+    <!-- <section>
       <div class="result">
         <div class="result-img">
           <img src="https://via.placeholder.com/150" alt="result-img" />
@@ -58,13 +66,7 @@
           <span>3 mins</span>
         </div>
       </div>
-    </section>
-    <div class="input">
-      <input type="text" />
-      <div class="autocomplete">
-        <ul id="list"></ul>
-      </div>
-    </div>
+    </section> -->
 
     <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.23.0/maps/maps-web.min.js"></script>
     <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.23.0/services/services-web.min.js"></script>

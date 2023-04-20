@@ -1,7 +1,7 @@
 import { map } from "./mapDisplay.js";
 
 const input = document.querySelector("input");
-const list = document.querySelector("ul");
+const list = document.querySelector("#list");
 
 input.addEventListener("input", search);
 const buttonRoute = document.querySelector("button");
