@@ -512,7 +512,6 @@ markerData.forEach((marker) => {
   var marker = new tt.Marker({
     element: divElement,
   })
-
     .setLngLat([marker.lat, marker.lng])
     .addTo(map)
     .setPopup(
