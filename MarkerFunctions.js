@@ -513,7 +513,7 @@ function showMore() {
     
       .setLngLat([marker.lat, marker.lng])
       .addTo(map)
-      .setPopup(new tt.Popup({ offset: 30}).setHTML("<b>" + marker.description + "</b><br><button onclick = showMore()> Voir plus</button>"));   
+      .setPopup(new tt.Popup({ offset: 30}).setHTML("<b>" + marker.description + "</b><br><button onclick = showMore()> Itinéraire </button>"));   
   });
 
  //--------------------------------- Filtre -----------------------------------------//
