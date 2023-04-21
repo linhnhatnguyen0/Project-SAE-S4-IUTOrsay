@@ -2,6 +2,7 @@ import { map } from "./mapDisplay.js";
 import { markerData } from "./markerData.js";
 
 const markers = [];
+let markersActuels = [];
 
 //---------------------------- Ajouter les markers a la map -------------------------//
 
@@ -14,7 +15,9 @@ markerData.forEach((marker) => {
   divElement.innerHTML =
     '<div class="marker"><img src=" ' +
     marker.icon +
-    '" width="22" height="26"></div>';
+    '" width="22" height="26"><p>' +
+    marker.nom +
+    "</p></div>";
   var marker = new tt.Marker({
     element: divElement,
   })
@@ -73,31 +76,25 @@ button8.addEventListener("click", function () {
   });
 });
 
-// function showMarkersOfType(type) {
-//   var markers = markerData;
-//   if (type === "voiture") {
-//     for (var i = 0; i < markers.length; i++) {
-//       if (markers[i].type === "voiture" || markers[i].type === "velo") {
-//         markers[i].setVisible(true);
-//       } else {
-//         markers[i].setVisible(false);
-//       }
-//     }
-//   } else {
-//     for (var i = 0; i < markers.length; i++) {
-//       if (markers[i].type === type) {
-//         markers[i].setVisible(true);
-//       } else {
-//         markers[i].setVisible(false);
-//       }
-//     }
-//   }
-// }
+map.on("zoom", function () {
+  console.log(map.getZoom());
+  if (map.getZoom() < 17.5) {
+    markersActuels.forEach((marker) => {
+      marker.remove();
+    });
+  } else {
+    markersActuels.forEach((marker) => {
+      marker.addTo(map);
+    });
+  }
+});
 
 function showMarkersOfType(typeMarker) {
+  markersActuels = [];
   for (let i = 0; i < markerData.length; i++) {
     if (markerData[i].type === typeMarker) {
       markers[i].addTo(map);
+      markersActuels.push(markers[i]);
     } else {
       markers[i].remove();
     }

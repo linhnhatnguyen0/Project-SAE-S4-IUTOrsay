@@ -13,12 +13,13 @@
   flex-direction: column;
 }
 .marker > p {
-  width: 50%;
-  color: rgb(192, 125, 0);
+  width: 100%;
+  color: rgb(0, 0, 0);
   font-family: "Inter", monospace;
   font-size: 0.7rem;
-  font-weight: 700;
+  font-weight: 500;
   line-height: normal;
+  text-align: center;
 }
 
 header {
@@ -91,7 +92,7 @@ ul#filterList2 > li {
   position: relative;
 }
 input {
-  padding: 12px 10px;
+  padding: 10px 15px;
   width: 100%;
   border: none;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
