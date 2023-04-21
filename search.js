@@ -22,16 +22,24 @@ function search() {
         language: "fr-FR",
         countrySet: "FR",
         boundingBox: boundingBox,
+        limit: 5,
       })
       .then(function (response) {
         // Récupère les informations sur le lieu à partir de la réponse
-        var place = response.results[0];
+        console.log(response);
         list.innerHTML = "";
         for (let index = 0; index < response.results.length; index++) {
           const element = response.results[index];
           console.log(element.address.freeformAddress);
           const li = document.createElement("li");
-          li.textContent = element.address.freeformAddress;
+          li.classList.add("list-group-item");
+          li.innerHTML =
+            "<h5>" +
+            element.poi.name +
+            "</h5>" +
+            "<p>" +
+            element.address.freeformAddress +
+            "</p>";
           li.addEventListener("click", function () {
             map.flyTo({
               center: element.position,
